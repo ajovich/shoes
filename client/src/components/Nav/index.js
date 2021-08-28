@@ -14,6 +14,21 @@ function Nav() {
             </Link>
           </li>
           <li className="mx-1">
+            <Link to="/men">
+              Men
+            </Link>
+          </li>
+          <li className="mx-1">
+            <Link to="/women">
+              Women
+            </Link>
+          </li>
+          <li className="mx-1">
+            <Link to="/kids">
+              Kids
+            </Link>
+          </li>
+          <li className="mx-1">
             {/* this is not using the Link component to logout or user and then refresh the application to the start */}
             <a href="/" onClick={() => Auth.logout()}>
               Logout
@@ -24,6 +39,21 @@ function Nav() {
     } else {
       return (
         <ul className="flex-row">
+          <li className="mx-1">
+            <Link to="/men">
+              Men
+            </Link>
+          </li>
+          <li className="mx-1">
+            <Link to="/women">
+              Women
+            </Link>
+          </li>
+          <li className="mx-1">
+            <Link to="/kids">
+              Kids
+            </Link>
+          </li>
           <li className="mx-1">
             <Link to="/signup">
               Signup
@@ -38,14 +68,14 @@ function Nav() {
       );
     }
   }
-
+// NavBar Left header
   return (
     <header className="flex-row px-1">
       <h1>
-        <Link to="/">
-          <span role="img" aria-label="shopping bag">🛍️</span>
-          -Shop-Shop
-        </Link>
+
+        <div>
+          Run It
+        </div>
       </h1>
 
       <nav>
