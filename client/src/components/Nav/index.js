@@ -68,7 +68,7 @@ function Nav() {
       );
     }
   }
-// NavBar Left header
+
   return (
     <header className="flex-row px-1">
       <h1>

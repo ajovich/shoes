@@ -8,14 +8,15 @@ import {
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 
-import { makeStyles } from '@material-ui/core/styles';
+// import { makeStyles } from '@material-ui/core/styles';
 
 import Home from './pages/Home';
 import Detail from './pages/Detail';
 import NoMatch from './pages/NoMatch';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
-import Nav from './components/Nav';
+// import Nav from './components/Nav';
+import Header from './components/Header';
 import { StoreProvider } from './utils/GlobalState';
 import Success from './pages/Success';
 import OrderHistory from './pages/OrderHistory';
@@ -49,7 +50,7 @@ function App() {
       <Router>
         <div>
           <StoreProvider>
-            <Nav />
+            <Header />
             <Switch>
               <Route exact path="/landing" component={Landing} />
               <Route exact path="/" component={Home} />
