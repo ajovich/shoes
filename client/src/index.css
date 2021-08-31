@@ -1,17 +1,133 @@
 :root {
-  /* --primary: #232F3E;
-  --secondary: #F3A847;
-  --tertiary: green;
-  --light: #fafafa;
-  --dark: #272f32;
-  --error: rgb(228, 46, 1); */
+  --font-medium: 400;
+  --font-semi-bold: 500;
+  --font-bold: 600;
+
+  --color-dark: #141414;
+  --color-accent: #D5D69A;
+  --color-secondary: #7D7F7B;
+  --color-white: #FFF;
+  --background-color: #FBFBF2;
+
   --spacing-one: calc(1rem * 0.5);
   --spacing-two: calc(1rem);
 }
 
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
+  font-family: 'Nunito', sans-serif;
+  overflow: hidden;
 }
+
+/* Home Page Styling Start */
+
+.home {
+  background-color: #FBFBF2;
+  overflow: hidden;
+}
+
+.homeContainer {
+  height: 100vh;
+}
+
+.sneakerShapeImages {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  margin-top: 90px;
+}
+
+.circleShape {
+  width: 250px;
+  height: 250px;
+  background-color: var(--color-accent);
+  border-radius: 50%;
+}
+
+.sneakerImage {
+  position: fixed;
+  top: -115px;
+  max-width: initial;
+  width: 600px;
+  height: 600px;
+  transform: rotate(-12deg);
+  margin-top: 90px;
+  transition: 0.2s;
+}
+
+.sneakerImage:hover {
+  transform: scale(1.02);
+}
+
+.bodyContainer {
+  margin-top: 50px;
+  margin-left: 70px;
+}
+
+
+.descriptionTitle {
+  font-size: 56px;
+  margin-bottom: 16px;
+}
+
+.descriptionBody {
+  margin-bottom: 24px;
+}
+
+.exploreMoreButton {
+  display: inline-block;
+  background-color: var(--color-accent);
+  color: var(--color-dark);
+  padding: 16px 18px;
+  border-radius: 8px;
+  transition: .3s;
+}
+
+.button:hover {
+  transform: translateY(-4px);
+}
+
+/* hr {
+  width: 50%;
+  margin: 0 auto;
+} */
+
+/* Media queries for multiple devices */
+
+@media all and (min-width: 768px){
+  body {
+      margin: 0;
+  }
+  .section {
+      padding: 110px 0;
+  }
+  .homeContainer {
+      height: 100vh;
+      grid-template-columns: max-content max-content;
+      justify-content: center;
+      align-items: center;
+  }
+  .bodyContainer {
+      margin-top: 50px;
+      margin-left: 180px;
+  }
+  .circleShape {
+      width: 285px;
+      height: 285px;
+  }
+  .sneakerImage {
+      position: fixed;
+      width: 625px;
+      height: 625px;
+      top: -85px;
+      right: 0;
+      left: 500px;
+  }
+};
+/* Home Page Styling End */
 
 html,
 body {

@@ -58,6 +58,8 @@
 // export default Nav;
 
 import React, { Component } from "react";
+import Auth from "../../utils/auth";
+import { Link } from "react-router-dom";
 import { MenuItems } from "./MenuItems";
 import '../Nav/index.css'
 
@@ -75,7 +77,13 @@ class Navbar extends Component {
   render() {
     return(
       <nav className="navbarItems">
-        <h1 className="navbarLogo">Run It.</h1>
+
+        <h1 className="navbarLogo">
+          <Link to="/">
+              Run It.
+          </Link>
+        </h1>
+
         <div className="menuIcon" onClick={this.handleClick}>
             <i className={this.state.clicked ? 'fas fa-times' : 'fas fa-bars'}></i>
         </div>
