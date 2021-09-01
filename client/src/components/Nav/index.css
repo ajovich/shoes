@@ -9,15 +9,12 @@
     background-color: #FBFBF2;
     height: 100px;
     display: flex;
-    justify-content: center;
-    align-items: center;
     font-size: 16px;
 }
 
 .navbarLogo {
     color: #333333;
-    justify-self: start;
-    margin-left: 20px;
+    margin-left: 100px;
     cursor: pointer;
 }
 
@@ -43,6 +40,10 @@
     text-decoration: none;
 }
 
+.greenDot {
+    color: #D5D69A;
+}
+
 .fa-bars {
     color: #333333;
     font-size: 26px;
@@ -51,6 +52,21 @@
 
 .menuIcon {
     display: none;
+}
+
+.navHeader {
+    background-color: #FBFBF2;
+}
+
+.runIt {
+    margin-left: 170px;
+    margin-top: 20px;
+    background-color: #FBFBF2;
+}
+
+.loginSignUp{
+    margin-left: 100px;
+    margin-bottom: 100px;
 }
 
 @media screen and (max-width: 768px) {
