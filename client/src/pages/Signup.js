@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 import Auth from '../utils/auth';
 import { ADD_USER } from '../utils/mutations';
-import { Grid, Paper, Avatar, TextField, Button, Typography } from '@material-ui/core';
+import { Grid, Paper, Avatar, TextField, Button, Typography, FormGroup } from '@material-ui/core';
 
 function Signup(props) {
   const [formState, setFormState] = useState({ email: '', password: '' });
@@ -49,14 +49,14 @@ function Signup(props) {
             <br />
           </Grid>
           
-          <Grid onSubmit={handleFormSubmit}>
+          <FormGroup onSubmit={handleFormSubmit}>
               <TextField label="First Name" placeholder="Enter First Name" fullWidth required onChange={handleChange} />
               <TextField label="Last Name" placeholder="Enter Last Name" fullWidth required onChange={handleChange} />
               <TextField label="Email" placeholder="Enter Email" fullWidth required onChange={handleChange} />
               <TextField label="Password" placeholder="Enter Password" type="password" fullWidth required onChange={handleChange} />
               <br />
               <Button type="submit" color="default" variant="contained" style={buttonStyle} fullWidth>SIGN UP</Button>
-          </Grid>
+          </FormGroup>
 
 
           <Typography style={noAccountStyle}> Already have an account?
