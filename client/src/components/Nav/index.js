@@ -63,6 +63,10 @@ import { Link } from "react-router-dom";
 import { MenuItems } from "./MenuItems";
 import '../Nav/index.css'
 
+// import ProductList from "../ProductList";
+import CategoryMenu from "../CategoryMenu";
+// import Cart from "../Cart";
+
 // .map iterates through array items
 // in MenuItems.js, class is "nav-links" and will link to the link title & url
 class Navbar extends Component {
@@ -99,6 +103,12 @@ class Navbar extends Component {
               )
           })}
         </ul>
+
+        {/* <div className="container">
+              <CategoryMenu />
+              <ProductList />
+              <Cart />
+          </div> */}
       </nav>
     )
   }
