@@ -26,6 +26,7 @@
 .home {
   background-color: #FBFBF2;
   overflow: hidden;
+  padding-top: 50px;
 }
 
 .homeContainer {
@@ -48,13 +49,13 @@
 }
 
 .sneakerImage {
-  position: fixed;
+  position: relative;
   top: -115px;
   max-width: initial;
-  width: 600px;
-  height: 600px;
+  width: 800px;
+  height: 800px;
   transform: rotate(-12deg);
-  margin-top: 90px;
+  margin-top: 200px;
   transition: 0.2s;
 }
 
@@ -90,10 +91,9 @@
   transform: translateY(-4px);
 }
 
-/* hr {
-  width: 50%;
-  margin: 0 auto;
-} */
+.greenDot {
+  color: var(--color-accent);
+}
 
 /* Media queries for multiple devices */
 
@@ -254,6 +254,24 @@ input:focus {
 .flex-row {
   display: flex;
   flex-wrap: wrap;
+  justify-content: flex-start;
+  padding-top: 15px;
+  padding-right: 40px;
+  background-color: #FBFBF2;
+  font-size: 20px;
+}
+
+.headerText {
+  padding-left: 190px;
+  padding-top: 40px;
+}
+
+.homeCategoryMenu,.cartHome {
+  padding-top: 15px;
+}
+
+.justifyLeft {
+  justify-content: flex-start;
 }
 
 .space-between {
@@ -265,8 +283,9 @@ input:focus {
 }
 
 .mx-1 {
-  margin-right: var(--spacing-one);
-  margin-left: var(--spacing-one);
+  /* margin-right: var(--spacing-one);
+  margin-left: var(--spacing-one); */
+  margin-left: 100px;
 }
 
 .mx-2 {
@@ -284,10 +303,10 @@ input:focus {
   margin-bottom: var(--spacing-two);
 }
 
-.px-1 {
+/* .px-1 {
   padding-right: var(--spacing-one);
   padding-left: var(--spacing-one);
-}
+} */
 
 .px-2 {
   padding-right: var(--spacing-two);

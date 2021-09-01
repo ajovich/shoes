@@ -14,7 +14,7 @@ const Home = () => {
         </div>
 
         <body className="bodyContainer">
-          <h1 className="descriptionTitle">Run It.</h1>
+          <h1 className="descriptionTitle">Run It<span className="greenDot">.</span></h1>
 
           <p className="descriptionBody">
               A curated selection of running shoes chosen <br />for you. <br />Sign up for a free account today.
