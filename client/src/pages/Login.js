@@ -38,37 +38,6 @@ function Login(props) {
   const gridStyle={backgroundColor: "#FBFBF2", height: "100vh"}
 
   return (
-    // <Grid style={gridStyle}>  
-    //   <Paper variant="outlined" style={paperOutlinedStyle}>
-    //       <Grid align="center">
-    //         <br />
-    //         <Avatar style={avatarCircleStyle}></Avatar>
-    //         <br />
-    //         <h2>Welcome Back!</h2>
-    //         <br />
-    //       </Grid>
-          
-    //       <FormGroup onSubmit={handleFormSubmit}> 
-    //           <TextField label="Email" placeholder="Enter Email" fullWidth required onChange={handleChange}/>
-    //           <TextField label="Password" placeholder="Enter Password" type="password" fullWidth required onChange={handleChange}/>
-
-    //           {error ? (
-    //               <div>
-    //                 <p className="error-text">Please try again. Incorrect username or password. </p>
-    //               </div>
-    //           ) : null}
-
-    //           <Button type="submit" color="default" variant="contained" style={buttonStyle} fullWidth>LOGIN</Button>
-    //       </FormGroup>
-          
-    //       <Typography style={noAccountStyle}> Don't have an account?
-    //           <Link to="/signup" style={signUpLinkStyle}>
-    //               Sign Up
-    //           </Link>
-    //       </Typography>
-    //   </Paper>
-    // </Grid>
-
     <Grid style={gridStyle}>
       <Paper variant="outlined" style={paperOutlinedStyle}>
           <Grid align="center">
@@ -80,13 +49,15 @@ function Login(props) {
           </Grid>
 
           <form onSubmit={handleFormSubmit}>
-              <TextField label="Email" placeholder="Email address" fullWidth name="email" type="email" id="email" onChange={handleChange} />
-              <TextField label="Password" placeholder="Password" name="password" type="password" id="pwd" fullWidth onChange={handleChange} />
+              <TextField label="Email" placeholder="Email address" fullWidth required name="email" type="email" id="email" onChange={handleChange} />
+              <TextField label="Password" placeholder="Password" name="password" type="password" id="pwd" fullWidth required onChange={handleChange} />
+              
               {error ? (
                 <div>
                   <p className="error-text">Please try again. Incorrect email or password.</p>
                 </div>
               ) : null}
+
               <Button type="submit" color="default" variant="contained" style={buttonStyle} fullWidth>LOGIN</Button>
           </form>
 

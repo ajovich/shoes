@@ -37,35 +37,9 @@ function Signup(props) {
   const signUpLinkStyle={marginLeft: "8px", fontSize: "12px"}
   const noAccountStyle={fontSize: "12px"}
   const gridStyle={backgroundColor: "#FBFBF2", height: "100vh"}
+  const test={width:"200%"}
 
   return (
-    // <Grid style={gridStyle}>  
-    //   <Paper variant="outlined" style={paperOutlinedStyle}>
-    //       <Grid align="center">
-    //         <br />
-    //         <Avatar style={avatarCircleStyle}></Avatar>
-    //         <br />
-    //         <h2>Sign Up For Free!</h2>
-    //         <br />
-    //       </Grid>
-          
-    //       <FormGroup onSubmit={handleFormSubmit}>
-    //           <TextField label="First Name" placeholder="Enter First Name" fullWidth required onChange={handleChange} />
-    //           <TextField label="Last Name" placeholder="Enter Last Name" fullWidth required onChange={handleChange} />
-    //           <TextField label="Email" placeholder="Enter Email" fullWidth required onChange={handleChange} />
-    //           <TextField label="Password" placeholder="Enter Password" type="password" fullWidth required onChange={handleChange} />
-    //           <br />
-    //           <Button type="submit" color="default" variant="contained" style={buttonStyle} fullWidth>SIGN UP</Button>
-    //       </FormGroup>
-
-
-    //       <Typography style={noAccountStyle}> Already have an account?
-    //           <Link to="/login" style={signUpLinkStyle}>
-    //               Login
-    //           </Link>
-    //       </Typography>
-    //   </Paper>
-    // </Grid>
     <Grid style={gridStyle}>
         <Paper variant="outlined" style={paperOutlinedStyle}>
             <Grid align="center">
