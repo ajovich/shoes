@@ -30,7 +30,7 @@ function Nav() {
         <ul className="flex-row signUpLogin">
           <li className="mx-1">
             <Link to="/signup">
-              SIGNUP
+              SIGN UP
             </Link>
           </li>
           <li className="mx-1">

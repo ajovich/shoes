@@ -197,15 +197,19 @@ header a {
   color: var(--light);
 }
 
+/* Navbar Categories Styling */
 button {
-  font-size: 1rem;
+  font-size: 22px;
+  font-weight: 500;
+  text-transform: uppercase;
   text-decoration: none;
-  padding: 0.25rem 1rem;
+  padding: 30px;
   border-radius: .5rem;
   border: none;
   outline: none;
   cursor: pointer;
-  margin: 0 1px;
+  /* margin: 0 1px; */
+  margin-top: -30px;
   background-color: var(--secondary);
 }
 
