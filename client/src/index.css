@@ -1,17 +1,196 @@
 :root {
-  --primary: #232F3E;
-  --secondary: #F3A847;
-  --tertiary: #B12704;
-  --light: #fafafa;
-  --dark: #272f32;
-  --error: rgb(228, 46, 1);
+  --font-medium: 400;
+  --font-semi-bold: 500;
+  --font-bold: 600;
+
+  --color-dark: #141414;
+  --color-accent: #D5D69A;
+  --color-secondary: #7D7F7B;
+  --color-white: #FFF;
+  --background-color: #FBFBF2;
+
   --spacing-one: calc(1rem * 0.5);
   --spacing-two: calc(1rem);
 }
 
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden;
 }
+
+/* Home Page Styling Start */
+/* 
+.home {
+  background-color: #FBFBF2;
+  overflow: hidden;
+  padding-top: 50px;
+}
+
+.homeContainer {
+  height: 100vh;
+}
+
+.sneakerShapeImages {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  margin-top: 90px;
+}
+
+.circleShape {
+  width: 250px;
+  height: 250px;
+  background-color: var(--color-accent);
+  border-radius: 50%;
+}
+
+.sneakerImage {
+  position: relative;
+  top: -115px;
+  max-width: initial;
+  width: 800px;
+  height: 800px;
+  transform: rotate(-12deg);
+  transition: 0.2s;
+  margin-top: 200px;
+}
+
+.sneakerImage:hover {
+  transform: scale(1.02);
+}
+
+.bodyContainer {
+  margin-top: 50px;
+  margin-left: 70px;
+}
+
+
+.descriptionTitle {
+  font-size: 56px;
+  margin-bottom: 16px;
+}
+
+.descriptionBody {
+  margin-bottom: 24px;
+}
+
+.exploreMoreButton {
+  display: inline-block;
+  background-color: var(--color-accent);
+  color: var(--color-dark);
+  padding: 16px 18px;
+  border-radius: 8px;
+  transition: .3s;
+}
+
+.button:hover {
+  transform: translateY(-4px);
+}
+
+.greenDot {
+  color: var(--color-accent);
+}
+
+/* Media queries for multiple devices */
+
+/* @media all and (min-width: 768px){
+  body {
+      margin: 0;
+  }
+  .section {
+      padding: 110px 0;
+  }
+  .homeContainer {
+      height: 100vh;
+      grid-template-columns: max-content max-content;
+      justify-content: center;
+      align-items: center;
+  }
+  .bodyContainer {
+      margin-top: 50px;
+      margin-left: 180px;
+  }
+  .circleShape {
+      width: 285px;
+      height: 285px;
+  }
+  .sneakerImage {
+      position: fixed;
+      width: 625px;
+      height: 625px;
+      top: -85px;
+      right: 0;
+      left: 500px;
+  }
+}; */
+/* Home Page Styling End */
+
+/* NEW STYLED HOMEPAGE STYLING START */
+
+.home {
+  min-height: 100vh;
+  width: 100vw;
+  background-color: var(--background-color);
+}
+
+.homeContainer {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.content {
+  text-align: left;
+  padding-left: 190px;
+  /* padding-left: 270px; */
+}
+
+.homeTitle {
+  font-size: 46px;
+  font-weight: 500;
+  color: var(--color-dark);
+}
+
+.homeDescription {
+  font-size: 22px;
+  color: var(--color-dark);
+}
+
+.runningShoeImage {
+  width: 50vw;
+  transform: rotate(-12deg);
+  transition: 0.2s;
+  /* padding-right: 50px; */
+}
+
+.runningShoeImage:hover {
+  transform: scale(1.02);
+}
+
+.exploreMoreButton {
+  display: inline-block;
+  background-color: var(--color-accent);
+  color: var(--color-dark);
+  padding: 16px 18px;
+  border-radius: 8px;
+  transition: .3s;
+}
+
+.exploreMoreButton:hover {
+  transform: translateY(-4px);
+}
+
+.greenDot {
+  color: var(--color-accent);
+}
+
+/* NEW STYLED HOMEPAGE STYLING END */
 
 html,
 body {
@@ -21,7 +200,6 @@ body {
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Karla', sans-serif;
   font-weight: 400;
   line-height: 1.5;
   font-size: 16px;
@@ -34,7 +212,6 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Rubik', sans-serif;
   font-weight: 500;
   margin: 5px 0;
   line-height: 1.25;
@@ -75,10 +252,6 @@ a {
   font-weight: bold;
 }
 
-a:hover {
-  text-decoration: underline;
-}
-
 header {
   background: var(--primary);
 }
@@ -87,15 +260,19 @@ header a {
   color: var(--light);
 }
 
+/* Navbar Categories Styling */
 button {
-  font-size: 1rem;
+  font-size: 22px;
+  font-weight: 500;
+  text-transform: uppercase;
   text-decoration: none;
-  padding: 0.25rem 1rem;
+  padding: 30px;
   border-radius: .5rem;
   border: none;
   outline: none;
   cursor: pointer;
-  margin: 0 1px;
+  /* margin: 0 1px; */
+  margin-top: -30px;
   background-color: var(--secondary);
 }
 
@@ -117,7 +294,7 @@ span[role="img"] {
 }
 
 form {
-  width: 40%;
+  width: 100%;
 }
 
 input {
@@ -144,6 +321,24 @@ input:focus {
 .flex-row {
   display: flex;
   flex-wrap: wrap;
+  justify-content: flex-start;
+  padding-top: 15px;
+  padding-right: 40px;
+  background-color: #FBFBF2;
+  font-size: 20px;
+}
+
+.headerText {
+  padding-left: 190px;
+  padding-top: 40px;
+}
+
+.homeCategoryMenu,.cartHome {
+  padding-top: 15px;
+}
+
+.justifyLeft {
+  justify-content: flex-start;
 }
 
 .space-between {
@@ -155,8 +350,9 @@ input:focus {
 }
 
 .mx-1 {
-  margin-right: var(--spacing-one);
-  margin-left: var(--spacing-one);
+  /* margin-right: var(--spacing-one);
+  margin-left: var(--spacing-one); */
+  margin-left: 100px;
 }
 
 .mx-2 {
@@ -174,10 +370,10 @@ input:focus {
   margin-bottom: var(--spacing-two);
 }
 
-.px-1 {
+/* .px-1 {
   padding-right: var(--spacing-one);
   padding-left: var(--spacing-one);
-}
+} */
 
 .px-2 {
   padding-right: var(--spacing-two);
