@@ -9,7 +9,7 @@ db.once('open', async () => {
     { name: 'Women' },
     { name: 'Kids' },
     { name: 'Sales' },
-    { name: 'Toys' }
+    { name: 'Latest' }
   ]);
 
   console.log('categories seeded');

@@ -3,7 +3,7 @@ import { useMutation } from '@apollo/client';
 import { Link } from 'react-router-dom';
 import { LOGIN } from '../utils/mutations';
 import Auth from '../utils/auth';
-import { Grid, Paper, Avatar, TextField, Button, Typography, FormGroup } from '@material-ui/core';
+import { Grid, Paper, Avatar, TextField, Button, Typography } from '@material-ui/core';
 
 function Login(props) {
   const [formState, setFormState] = useState({ email: '', password: '' });
@@ -38,29 +38,58 @@ function Login(props) {
   const gridStyle={backgroundColor: "#FBFBF2", height: "100vh"}
 
   return (
-    <Grid style={gridStyle}>  
+    // <Grid style={gridStyle}>  
+    //   <Paper variant="outlined" style={paperOutlinedStyle}>
+    //       <Grid align="center">
+    //         <br />
+    //         <Avatar style={avatarCircleStyle}></Avatar>
+    //         <br />
+    //         <h2>Welcome Back!</h2>
+    //         <br />
+    //       </Grid>
+          
+    //       <FormGroup onSubmit={handleFormSubmit}> 
+    //           <TextField label="Email" placeholder="Enter Email" fullWidth required onChange={handleChange}/>
+    //           <TextField label="Password" placeholder="Enter Password" type="password" fullWidth required onChange={handleChange}/>
+
+    //           {error ? (
+    //               <div>
+    //                 <p className="error-text">Please try again. Incorrect username or password. </p>
+    //               </div>
+    //           ) : null}
+
+    //           <Button type="submit" color="default" variant="contained" style={buttonStyle} fullWidth>LOGIN</Button>
+    //       </FormGroup>
+          
+    //       <Typography style={noAccountStyle}> Don't have an account?
+    //           <Link to="/signup" style={signUpLinkStyle}>
+    //               Sign Up
+    //           </Link>
+    //       </Typography>
+    //   </Paper>
+    // </Grid>
+
+    <Grid style={gridStyle}>
       <Paper variant="outlined" style={paperOutlinedStyle}>
           <Grid align="center">
-            <br />
-            <Avatar style={avatarCircleStyle}></Avatar>
-            <br />
-            <h2>Welcome Back!</h2>
-            <br />
+              <br />
+              <Avatar style={avatarCircleStyle}></Avatar>
+              <br />
+              <h2>Welcome Back!</h2>
+              <br />
           </Grid>
-          
-          <FormGroup onSubmit={handleFormSubmit}> 
-              <TextField label="Email" placeholder="Enter Email" fullWidth required onChange={handleChange}/>
-              <TextField label="Password" placeholder="Enter Password" type="password" fullWidth required onChange={handleChange}/>
 
+          <form onSubmit={handleFormSubmit}>
+              <TextField label="Email" placeholder="Email address" fullWidth name="email" type="email" id="email" onChange={handleChange} />
+              <TextField label="Password" placeholder="Password" name="password" type="password" id="pwd" fullWidth onChange={handleChange} />
               {error ? (
-                  <div>
-                    <p className="error-text">Please try again. Incorrect username or password. </p>
-                  </div>
+                <div>
+                  <p className="error-text">Please try again. Incorrect email or password.</p>
+                </div>
               ) : null}
-
               <Button type="submit" color="default" variant="contained" style={buttonStyle} fullWidth>LOGIN</Button>
-          </FormGroup>
-          
+          </form>
+
           <Typography style={noAccountStyle}> Don't have an account?
               <Link to="/signup" style={signUpLinkStyle}>
                   Sign Up
