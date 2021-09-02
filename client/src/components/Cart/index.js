@@ -77,7 +77,7 @@ const Cart = () => {
       <div className="close" onClick={toggleCart}>
         x
       </div>
-      <h2>Shopping Bag</h2>
+      <h3>Shopping Bag</h3>
       {state.cart.length ? (
         <div>
           {state.cart.map((item) => (
@@ -95,10 +95,10 @@ const Cart = () => {
           </div>
         </div>
       ) : (
-        <h3>
+        <h4>
           {/* <RemoveShoppingCartOutlinedIcon/> */}
           Empty
-        </h3>
+        </h4>
       )}
     </div>
   );
