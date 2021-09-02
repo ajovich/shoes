@@ -41,3 +41,23 @@ How does the website work?
 ## Installation and Set up 
 
 What packages needs  to be installed for code to work properly? 
+
+In the root folder of the project:
+npm i  
+npm run seeds
+
+client package-json
+ -@material-ui/core
+ -@material-ui/icons
+ -@apollo/client
+ -@stripe/stripe-js
+
+ Server package-json
+ -apollo-server-express
+ -bcrypt
+ -express
+ -graphql
+ -jsonwebtoken
+ -mongoose
+ -stripe
+
