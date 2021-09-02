@@ -11,6 +11,8 @@ import './style.css';
 import ShoppingCartOutlinedIcon from '@material-ui/icons/ShoppingCartOutlined';
 import RemoveShoppingCartOutlinedIcon from '@material-ui/icons/RemoveShoppingCartOutlined';
 
+import LocalMallOutlinedIcon from '@material-ui/icons/LocalMallOutlined';
+
 const stripePromise = loadStripe('pk_test_TYooMQauvdEDq54NiTphI7jx');
 
 const Cart = () => {
@@ -65,7 +67,7 @@ const Cart = () => {
   if (!state.cartOpen) {
     return (
       <div className="cart-closed" onClick={toggleCart}>
-        <ShoppingCartOutlinedIcon/>
+        <LocalMallOutlinedIcon/>
       </div>
     );
   }
@@ -73,9 +75,9 @@ const Cart = () => {
   return (
     <div className="cart">
       <div className="close" onClick={toggleCart}>
-        [close]
+        x
       </div>
-      <h2>Shopping Cart</h2>
+      <h3>Shopping Bag</h3>
       {state.cart.length ? (
         <div>
           {state.cart.map((item) => (
@@ -93,10 +95,10 @@ const Cart = () => {
           </div>
         </div>
       ) : (
-        <h3>
-          <RemoveShoppingCartOutlinedIcon/>
-          Your cart is currently empty
-        </h3>
+        <h4>
+          {/* <RemoveShoppingCartOutlinedIcon/> */}
+          Empty
+        </h4>
       )}
     </div>
   );
