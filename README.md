@@ -30,5 +30,14 @@ Heroku
 Front end Framework : Material -UI
 
 
+## User Story
 
+Walk user through the webiste
 
+## Demo
+
+How does the website work?
+
+## Installation and Set up 
+
+What packages needs  to be installed for code to work properly? 
