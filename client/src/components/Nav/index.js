@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import '../Nav/index.css'
 import CategoryMenu from "../CategoryMenu";
 import Cart from "../Cart";
-// import ProductList from "../ProductList";
+import ProductList from "../ProductList";
 
 function Nav() {
 
