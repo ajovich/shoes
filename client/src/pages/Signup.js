@@ -51,10 +51,10 @@ function Signup(props) {
             </Grid>
 
       <form onSubmit={handleFormSubmit}>
-          <TextField label="First Name" placeholder="First name" fullWidth name="firstName" type="firstName" id="firstName" onChange={handleChange} />
-          <TextField label="Last Name" placeholder="Last name" fullWidth name="lastName" type="lastName" id="lastName" onChange={handleChange} />
-          <TextField label="Email" placeholder="Email address" fullWidth name="email" type="email" id="email" onChange={handleChange} />
-          <TextField label="Password" placeholder="Password" fullWidth name="password" type="password" id="pwd" onChange={handleChange} />
+          <TextField label="First Name" placeholder="First name" fullWidth required name="firstName" type="firstName" id="firstName" onChange={handleChange} />
+          <TextField label="Last Name" placeholder="Last name" fullWidth required name="lastName" type="lastName" id="lastName" onChange={handleChange} />
+          <TextField label="Email" placeholder="Email address" fullWidth required name="email" type="email" id="email" onChange={handleChange} />
+          <TextField label="Password" placeholder="Password" fullWidth required name="password" type="password" id="pwd" onChange={handleChange} />
 
           <Button type="submit" color="default" variant="contained" style={buttonStyle} fullWidth>SIGN UP</Button>
       </form>
