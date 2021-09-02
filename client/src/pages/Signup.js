@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 import Auth from '../utils/auth';
 import { ADD_USER } from '../utils/mutations';
-import { Grid, Paper, Avatar, TextField, Button, Typography, FormGroup } from '@material-ui/core';
+import { Grid, Paper, Avatar, TextField, Button, Typography } from '@material-ui/core';
 
 function Signup(props) {
   const [formState, setFormState] = useState({ email: '', password: '' });
@@ -37,27 +37,27 @@ function Signup(props) {
   const signUpLinkStyle={marginLeft: "8px", fontSize: "12px"}
   const noAccountStyle={fontSize: "12px"}
   const gridStyle={backgroundColor: "#FBFBF2", height: "100vh"}
+  const test={width:"200%"}
 
   return (
-    <Grid style={gridStyle}>  
-      <Paper variant="outlined" style={paperOutlinedStyle}>
-          <Grid align="center">
-            <br />
-            <Avatar style={avatarCircleStyle}></Avatar>
-            <br />
-            <h2>Sign Up For Free!</h2>
-            <br />
-          </Grid>
-          
-          <FormGroup onSubmit={handleFormSubmit}>
-              <TextField label="First Name" placeholder="Enter First Name" fullWidth required onChange={handleChange} />
-              <TextField label="Last Name" placeholder="Enter Last Name" fullWidth required onChange={handleChange} />
-              <TextField label="Email" placeholder="Enter Email" fullWidth required onChange={handleChange} />
-              <TextField label="Password" placeholder="Enter Password" type="password" fullWidth required onChange={handleChange} />
-              <br />
-              <Button type="submit" color="default" variant="contained" style={buttonStyle} fullWidth>SIGN UP</Button>
-          </FormGroup>
+    <Grid style={gridStyle}>
+        <Paper variant="outlined" style={paperOutlinedStyle}>
+            <Grid align="center">
+                <br />
+                <Avatar style={avatarCircleStyle}></Avatar>
+                <br />
+                <h2>Sign Up For Free!</h2>
+                <br />
+            </Grid>
 
+      <form onSubmit={handleFormSubmit}>
+          <TextField label="First Name" placeholder="First name" fullWidth name="firstName" type="firstName" id="firstName" onChange={handleChange} />
+          <TextField label="Last Name" placeholder="Last name" fullWidth name="lastName" type="lastName" id="lastName" onChange={handleChange} />
+          <TextField label="Email" placeholder="Email address" fullWidth name="email" type="email" id="email" onChange={handleChange} />
+          <TextField label="Password" placeholder="Password" fullWidth name="password" type="password" id="pwd" onChange={handleChange} />
+
+          <Button type="submit" color="default" variant="contained" style={buttonStyle} fullWidth>SIGN UP</Button>
+      </form>
 
           <Typography style={noAccountStyle}> Already have an account?
               <Link to="/login" style={signUpLinkStyle}>

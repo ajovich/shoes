@@ -9,7 +9,7 @@
     background-color: #FBFBF2;
     height: 100px;
     display: flex;
-    font-size: 16px;
+    font-size: 22px;
 }
 
 .navbarLogo {
@@ -20,8 +20,8 @@
 
 .navMenu {
     display: grid;
-    grid-template-columns: repeat(6, auto);
-    grid-gap: 20px;
+    grid-template-columns: repeat(2, auto);
+    grid-gap: 15px;
     list-style: none;
     text-align: center;
     width: 70vw;
@@ -67,6 +67,11 @@
 .loginSignUp{
     margin-left: 100px;
     margin-bottom: 100px;
+}
+
+.signUpLogin {
+    font-size: 22px;
+    font-weight: 500;
 }
 
 @media screen and (max-width: 768px) {

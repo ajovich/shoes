@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import '../Nav/index.css'
 import CategoryMenu from "../CategoryMenu";
 import Cart from "../Cart";
+// import ProductList from "../ProductList";
 
 function Nav() {
 
@@ -29,7 +30,7 @@ function Nav() {
         <ul className="flex-row signUpLogin">
           <li className="mx-1">
             <Link to="/signup">
-              SIGNUP
+              SIGN UP
             </Link>
           </li>
           <li className="mx-1">
@@ -52,6 +53,7 @@ function Nav() {
       {showNavigation()}
       <div className="homeCategoryMenu">
         <CategoryMenu />
+        {/* <ProductList /> */}
       </div>
 
       <div className="cartHome">

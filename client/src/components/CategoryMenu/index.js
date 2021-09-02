@@ -7,6 +7,7 @@ import {
 } from '../../utils/actions';
 import { QUERY_CATEGORIES } from '../../utils/queries';
 import { idbPromise } from '../../utils/helpers';
+import '../CategoryMenu/index.css'
 
 function CategoryMenu() {
   const [state, dispatch] = useStoreContext();
@@ -42,8 +43,7 @@ function CategoryMenu() {
   };
 
   return (
-    <div>
-      {/* <h2>Choose a Category:</h2> */}
+    <div className="navCategoryLinks">
       {categories.map((item) => (
         <button
           key={item._id}

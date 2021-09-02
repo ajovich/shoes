@@ -6,14 +6,14 @@ import "../../src/index.css";
 
 const Home = () => {
   return (
-    <section className="home">
+    <div className="home">
       <div className="homeContainer">
         <div className="sneakerShapeImages">
           <div className="circleShape"></div>
           <img src="/images/highDefNikeShoeImage.png" alt="Black and gray Nike running shoe with laces out" className="sneakerImage" />
         </div>
 
-        <body className="bodyContainer">
+        <div className="bodyContainer">
           <h1 className="descriptionTitle">Run It<span className="greenDot">.</span></h1>
 
           <p className="descriptionBody">
@@ -21,9 +21,9 @@ const Home = () => {
           </p>
 
           <a href="/signup" className="exploreMoreButton">Explore More</a>
-        </body>
+        </div>
       </div>
-    </section>
+    </div>
   );
 };
 

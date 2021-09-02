@@ -95,7 +95,7 @@ const Cart = () => {
       ) : (
         <h3>
           <RemoveShoppingCartOutlinedIcon/>
-          Your cart is currently empty!
+          Your cart is currently empty
         </h3>
       )}
     </div>
