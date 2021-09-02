@@ -22,7 +22,7 @@
 }
 
 /* Home Page Styling Start */
-
+/* 
 .home {
   background-color: #FBFBF2;
   overflow: hidden;
@@ -55,8 +55,8 @@
   width: 800px;
   height: 800px;
   transform: rotate(-12deg);
-  margin-top: 200px;
   transition: 0.2s;
+  margin-top: 200px;
 }
 
 .sneakerImage:hover {
@@ -97,7 +97,7 @@
 
 /* Media queries for multiple devices */
 
-@media all and (min-width: 768px){
+/* @media all and (min-width: 768px){
   body {
       margin: 0;
   }
@@ -126,8 +126,71 @@
       right: 0;
       left: 500px;
   }
-};
+}; */
 /* Home Page Styling End */
+
+/* NEW STYLED HOMEPAGE STYLING START */
+
+.home {
+  min-height: 100vh;
+  width: 100vw;
+  background-color: var(--background-color);
+}
+
+.homeContainer {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.content {
+  text-align: left;
+  padding-left: 190px;
+  /* padding-left: 270px; */
+}
+
+.homeTitle {
+  font-size: 46px;
+  font-weight: 500;
+  color: var(--color-dark);
+}
+
+.homeDescription {
+  font-size: 22px;
+  color: var(--color-dark);
+}
+
+.runningShoeImage {
+  width: 50vw;
+  transform: rotate(-12deg);
+  transition: 0.2s;
+  /* padding-right: 50px; */
+}
+
+.runningShoeImage:hover {
+  transform: scale(1.02);
+}
+
+.exploreMoreButton {
+  display: inline-block;
+  background-color: var(--color-accent);
+  color: var(--color-dark);
+  padding: 16px 18px;
+  border-radius: 8px;
+  transition: .3s;
+}
+
+.exploreMoreButton:hover {
+  transform: translateY(-4px);
+}
+
+.greenDot {
+  color: var(--color-accent);
+}
+
+/* NEW STYLED HOMEPAGE STYLING END */
 
 html,
 body {
